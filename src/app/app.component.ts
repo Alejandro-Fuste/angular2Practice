@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = 'my-first-project';
+  title = "Fuste-Angular-Practice";
+  rootName = "Alejandro Fuste";
+
+  onNameChanged(newName: string) {
+    this.rootName = newName;
+  }
 }
