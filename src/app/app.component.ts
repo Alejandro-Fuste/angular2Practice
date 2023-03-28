@@ -5,11 +5,4 @@ import { Component } from "@angular/core";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
 })
-export class AppComponent {
-  title = "Fuste-Angular-Practice";
-  rootName = "Alejandro Fuste";
-
-  onNameChanged(newName: string) {
-    this.rootName = newName;
-  }
-}
+export class AppComponent {}
