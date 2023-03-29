@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { characterType } from "../../types/character";
 
 @Component({
@@ -8,9 +8,4 @@ import { characterType } from "../../types/character";
 })
 export class ListComponent {
   @Input() characters: characterType[] = [];
-  @Output() sideAssigned = new EventEmitter<{ name: string; side: string }>();
-
-  onSideAssigned(charInfo: any) {
-    this.sideAssigned.emit(charInfo);
-  }
 }
