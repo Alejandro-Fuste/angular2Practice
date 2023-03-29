@@ -25,4 +25,11 @@ export class TabsComponent {
       return char.side === this.chosenList;
     });
   }
+
+  onSideChosen(charInfo: any) {
+    const position = this.characters.findIndex((char) => {
+      return char.name === charInfo.name;
+    });
+    this.characters[position].side = charInfo.side;
+  }
 }
