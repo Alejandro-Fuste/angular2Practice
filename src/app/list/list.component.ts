@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from "@angular/core";
+import { characterType } from "../../types/character";
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: "app-list",
+  templateUrl: "./list.component.html",
+  styleUrls: ["./list.component.css"],
 })
 export class ListComponent {
-
+  @Input() characters: characterType[] = [];
 }
