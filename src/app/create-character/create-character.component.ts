@@ -22,6 +22,12 @@ export class CreateCharacterComponent {
 
   onSubmit(submittedForm: any) {
     const { name, side } = submittedForm.form.value;
+    const { invalid } = submittedForm;
+
+    if (invalid) return;
+
     this.swService.addCharacters(name, side);
+
+    console.dir(submittedForm);
   }
 }
