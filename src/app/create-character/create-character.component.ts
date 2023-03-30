@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { availableSidesType } from "../../types/character";
+import { StarWarsService } from "../star-wars.service";
 
 @Component({
   selector: "app-create-character",
@@ -13,7 +14,14 @@ export class CreateCharacterComponent {
     { display: "Dark", value: "dark" },
   ];
 
+  swService: StarWarsService;
+
+  constructor(swService: StarWarsService) {
+    this.swService = swService;
+  }
+
   onSubmit(submittedForm: any) {
-    console.log(submittedForm);
+    const { name, side } = submittedForm.form.value;
+    this.swService.addCharacters(name, side);
   }
 }

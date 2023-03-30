@@ -33,4 +33,9 @@ export class StarWarsService {
       `Changed side of ${charInfo.name} to new side: ${charInfo.side}`
     );
   }
+
+  addCharacters(name: string, side: string) {
+    const newCharacter: characterType = { name, side };
+    this.characters.push(newCharacter);
+  }
 }
