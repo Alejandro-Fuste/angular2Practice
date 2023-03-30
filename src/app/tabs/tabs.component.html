@@ -1,11 +1,7 @@
 <div>
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a
-        class="nav-link"
-        (click)="onChoose('all')"
-        style="cursor: pointer"
-        [ngClass]="{ active: chosenList === 'all' }"
+      <a class="nav-link" routerLink="/characters/all" routerLinkActive="active"
         >All</a
       >
     </li>
@@ -13,9 +9,8 @@
     <li class="nav-item">
       <a
         class="nav-link"
-        (click)="onChoose('light')"
-        style="cursor: pointer"
-        [ngClass]="{ active: chosenList === 'light' }"
+        routerLink="/characters/light"
+        routerLinkActive="active"
         >Light</a
       >
     </li>
@@ -23,12 +18,11 @@
     <li class="nav-item">
       <a
         class="nav-link"
-        (click)="onChoose('dark')"
-        style="cursor: pointer"
-        [ngClass]="{ active: chosenList === 'dark' }"
+        routerLink="/characters/dark"
+        routerLinkActive="active"
         >Dark</a
       >
     </li>
   </ul>
-  <app-list [characters]="getCharacters()"></app-list>
+  <router-outlet></router-outlet>
 </div>
