@@ -32,7 +32,6 @@ export class StarWarsService {
         );
         this.characters = charactersList;
         this.charactersChanged.next();
-        console.log(charactersList);
       });
   }
 

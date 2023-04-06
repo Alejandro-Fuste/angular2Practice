@@ -1,13 +1,11 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
 import { TabsComponent } from "./tabs/tabs.component";
 import { ListComponent } from "./list/list.component";
-import { CreateCharacterComponent } from "./create-character/create-character.component";
 import { ItemComponent } from "./item/item.component";
 import { StarWarsService } from "./star-wars.service";
 import { LogService } from "./log.service";
@@ -20,10 +18,10 @@ import { HeaderComponent } from "./header/header.component";
     TabsComponent,
     ListComponent,
     ItemComponent,
-    CreateCharacterComponent,
+
     HeaderComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [StarWarsService, LogService],
   bootstrap: [AppComponent],
 })
