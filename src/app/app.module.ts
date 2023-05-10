@@ -18,10 +18,9 @@ import { HeaderComponent } from "./header/header.component";
     TabsComponent,
     ListComponent,
     ItemComponent,
-
     HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [StarWarsService, LogService],
   bootstrap: [AppComponent],
 })
